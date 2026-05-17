@@ -1,0 +1,13 @@
+services:
+  app:
+    image: python:3.11-slim
+    ports:
+      - "0.0.0.0:5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=production
+    command: >
+      bash -c "pip install flask flask-cors requests -q &&
+               python /app/backend/app.py"
+    restart: unless-stopped
