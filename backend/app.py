@@ -9,6 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 
+
 NOTES_API_URL = "https://api.github.com/repos/Gladrat/notes_M1CS/contents/notes.json"
 FRONTEND_DIR = os.path.join(os.path.dirname(__file__), "..", "frontend")
 
